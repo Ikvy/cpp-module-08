@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 14:23:51 by mmidon            #+#    #+#             */
-/*   Updated: 2023/03/28 12:22:53 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/28 17:10:15 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ class Span{
 		Span& operator=(const Span& cpy);
 		
 		void addNumber(int nbr);
-		void shortestSpan();
+		int shortestSpan();
 		int longestSpan();
+
+		void insert(int pos, unsigned int n, int val);
+		void show();
 
 		class OutOfBondsException : public std::exception{
 		public:
