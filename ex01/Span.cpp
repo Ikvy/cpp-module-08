@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 10:28:59 by mmidon            #+#    #+#             */
-/*   Updated: 2023/03/28 17:10:01 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/29 09:16:35 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Span& Span::operator=(const Span& cpy)
 
 void Span::addNumber(int nbr)
 {
-	if (stock.size() > N)
+	if (stock.size() + 1 > N)
 		throw Span::OutOfBondsException();
 	else
 		stock.push_back(nbr);
@@ -59,7 +59,7 @@ int Span::shortestSpan()
 
 void Span::insert(int pos, unsigned int n, int val)
 {
-	if (stock.size() + n > N)
+	if (stock.size() + n > N || pos < 0 || pos >= static_cast<int>(N))
 		throw Span::OutOfBondsException();
 	for (unsigned int i = 0; i < n; i++)
 	{

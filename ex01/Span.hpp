@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 14:23:51 by mmidon            #+#    #+#             */
-/*   Updated: 2023/03/28 17:10:15 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/29 09:08:48 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Span{
 
 		class OutOfBondsException : public std::exception{
 		public:
-			 const char *what() const throw(){ return "no room left for this";};
+			 const char *what() const throw(){ return "no room for this";};
 		};
 		class NoSpanException : public std::exception{
 		public:
